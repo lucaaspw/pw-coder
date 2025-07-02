@@ -4,45 +4,46 @@ import { motion } from "framer-motion";
 const skills = [
   { name: "HTML/CSS", level: 95 },
   { name: "JavaScript", level: 90 },
-  { name: "React", level: 88 },
-  { name: "Next.js", level: 85 },
-  { name: "TypeScript", level: 82 },
-  { name: "React Native", level: 80 },
-  { name: "Angular", level: 78 },
+  { name: "React", level: 78 },
+  { name: "Next.js", level: 75 },
+  { name: "TypeScript", level: 62 },
+  { name: "React Native", level: 60 },
+  { name: "Angular", level: 58 },
   { name: "Tailwind CSS", level: 85 },
   { name: "SCSS", level: 80 },
-  { name: "Node.js", level: 65 },
-  { name: "C#", level: 60 },
-  { name: "Ruby", level: 55 },
-  { name: "SQL Server", level: 60 },
-  { name: "MongoDB", level: 55 },
-  { name: "PostgreSQL", level: 50 },
-  { name: "Prisma", level: 45 },
-  { name: "Docker", level: 50 },
+  { name: "Node.js", level: 55 },
+  { name: "C#", level: 50 },
+  { name: "Ruby", level: 35 },
+  { name: "SQL Server", level: 50 },
+  { name: "MongoDB", level: 35 },
+  { name: "PostgreSQL", level: 30 },
+  { name: "Prisma", level: 35 },
+  { name: "Docker", level: 30 },
   { name: "Azure DevOps", level: 55 },
   { name: "AWS S3", level: 50 },
 ];
 
 const experiences = [
   {
-    year: "2023 - Presente",
+    year: "2022 - 22024",
     title: "Full Stack Developer",
-    company: "Freelancer",
+    company: "SG Rentals",
     description:
-      "Desenvolvimento de aplicações web e mobile para clientes diversos",
+      "Desenvolvimento de interfaces para sites B2C e B2B com foco em performance, acessibilidade e experiência do usuário. Criação de protótipos com Adobe XD e Figma, apoiando validações com stakeholders. Participação em integrações importantes: Sistema white label para múltiplos sites B2B. Integração com SendGrid para automação de e-mails (confirmações, notificações). Implementação de landing pages mobile first, filtros de busca avançada e autocompletar inteligente para aeroportos e locadoras. Otimização de CSS e JavaScript, reduzindo tempo de carregamento e aumentando a performance geral Implementação com C#, Razor Pages, MVC, React, Next.js, JavaScript, jQuery, HTML, CSS, Materialize, Azure DevOps, Redis, SQL Server.",
   },
   {
-    year: "2021 - 2023",
-    title: "Backend Developer",
-    company: "Tech Company",
-    description:
-      "Desenvolvimento de APIs e sistemas backend com .NET e Node.js",
-  },
-  {
-    year: "2019 - 2021",
+    year: "2022 - 2022",
     title: "Frontend Developer",
-    company: "Startup",
-    description: "Criação de interfaces modernas com React e TypeScript",
+    company: "UOL Editech",
+    description:
+      "Desenvolvimento de plataformas de cursos e avaliações online para instituições bancárias.  Criação de interfaces responsivas (mobile first) com foco em usabilidade e acessibilidade. Consumo e manipulação de dados em XML para gerar questionários personalizados. Aplicação de animações interativas com JavaScript para experiências dinâmicas. Atuação com HTML, CSS, Sass, JavaScript, jQuery, React e Node.js.",
+  },
+  {
+    year: "2019 - 2022",
+    title: "Frontend Developer",
+    company: "Foster - Agência de Marketing Digital",
+    description:
+      " Desenvolvimento de sites e portais para instituições de saúde (HCor, Oswaldo Cruz, A.C.Camargo). Criação de temas personalizados em WordPress, com foco em identidade visual e CMS intuitivo. Desenvolvimento de landing pages otimizadas para conversão e desempenho.Construção de plataforma de pagamentos com Angular 6 e Assistente Virtual (VA) para melhorar a navegação.Utilização de HTML, CSS, Bootstrap, JavaScript, Angular, Node.js, priorizando boas práticas e performance.",
   },
 ];
 
@@ -50,7 +51,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Coluna da esquerda - Sobre mim */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
