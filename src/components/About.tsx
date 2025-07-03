@@ -56,7 +56,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -77,7 +77,7 @@ export default function About() {
             </p>
 
             {/* Experiência */}
-            <div className="space-y-6">
+            <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Experiência
               </h3>
@@ -86,7 +86,7 @@ export default function About() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   className="border-l-4 border-blue-600 pl-4"
                 >
@@ -109,7 +109,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
@@ -122,7 +122,10 @@ export default function About() {
                   key={skill.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: Math.min(index * 0.02, 0.2),
+                  }}
                   viewport={{ once: true }}
                 >
                   <div className="flex justify-between items-center mb-2">
@@ -138,7 +141,10 @@ export default function About() {
                       className="bg-blue-600 h-2 rounded-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
+                      transition={{
+                        duration: 0.8,
+                        delay: Math.min(index * 0.02, 0.2),
+                      }}
                       viewport={{ once: true }}
                     />
                   </div>
@@ -147,11 +153,11 @@ export default function About() {
             </div>
 
             {/* Estatísticas */}
-            <div className="grid grid-cols-2 gap-6 mt-12">
+            <div className="grid grid-cols-2 gap-4 mt-12">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
                 viewport={{ once: true }}
                 className="text-center p-6 bg-gray-50 rounded-lg"
               >
@@ -161,7 +167,7 @@ export default function About() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="text-center p-6 bg-gray-50 rounded-lg"
               >

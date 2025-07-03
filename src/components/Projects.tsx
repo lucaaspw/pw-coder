@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import OptimizedImage from "./OptimizedImage";
 
 const projects = [
   {
@@ -101,7 +102,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -119,15 +120,18 @@ export default function Projects() {
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.3) }}
               viewport={{ once: true }}
               className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="relative overflow-hidden">
-                <img
+                <OptimizedImage
                   src={project.image}
                   alt={project.title}
+                  width={800}
+                  height={600}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  priority={index < 3}
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -166,7 +170,7 @@ export default function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
           className="text-center mt-16"
         >

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface BlogPostProps {
   post: {
@@ -38,10 +39,13 @@ export default function BlogPost({ post }: BlogPostProps) {
     >
       {post.imageUrl && (
         <div className="aspect-video overflow-hidden">
-          <img
+          <OptimizedImage
             src={post.imageUrl}
             alt={post.title}
+            width={1200}
+            height={600}
             className="w-full h-full object-cover"
+            priority={true}
           />
         </div>
       )}
@@ -77,13 +81,16 @@ export default function BlogPost({ post }: BlogPostProps) {
                   </span>
                 </div>
               )}
-              <span className="text-gray-600">
+              <time
+                dateTime={post.createdAt.toISOString()}
+                className="text-gray-600"
+              >
                 {new Date(post.createdAt).toLocaleDateString("pt-BR", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
-              </span>
+              </time>
             </div>
           </div>
         </header>

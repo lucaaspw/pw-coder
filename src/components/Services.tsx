@@ -163,7 +163,7 @@ export default function Services() {
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.2) }}
               viewport={{ once: true }}
               className="group p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-gray-300"
             >
@@ -187,13 +187,16 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <a
+            href="#contact"
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
             Solicitar orçamento personalizado
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

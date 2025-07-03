@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import OptimizedImage from "@/components/OptimizedImage";
 
 interface Post {
   id: string;
@@ -82,9 +83,11 @@ export default function BlogList({ posts, categories }: BlogListProps) {
             >
               {post.imageUrl && (
                 <div className="aspect-video overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={post.imageUrl}
                     alt={post.title}
+                    width={800}
+                    height={400}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
