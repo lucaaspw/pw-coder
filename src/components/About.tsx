@@ -90,7 +90,7 @@ export default function About() {
                   viewport={{ once: true }}
                   className="border-l-4 border-blue-600 pl-4"
                 >
-                  <div className="text-sm text-blue-600 font-medium">
+                  <div className="text-sm pt-4 text-blue-600 font-medium">
                     {exp.year}
                   </div>
                   <div className="text-lg font-semibold text-gray-900">

@@ -4,94 +4,81 @@ import OptimizedImage from "./OptimizedImage";
 
 const projects = [
   {
-    title: "E-commerce Platform",
+    title: "Calculadora React",
+    category: "Web App",
+    description:
+      "Calculadora moderna e responsiva construída com React e TypeScript. Interface elegante com tema escuro/claro e operações matemáticas avançadas.",
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    link: "/demos/calculator",
+    demo: true,
+  },
+  {
+    title: "Todo List Interativa",
+    category: "Web App",
+    description:
+      "Aplicação de tarefas com drag & drop, categorização, filtros e persistência local. Interface intuitiva com animações suaves.",
+    image:
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+    technologies: ["React", "TypeScript", "Framer Motion", "LocalStorage"],
+    link: "/demos/todo",
+    demo: true,
+  },
+  {
+    title: "Weather App",
+    category: "Web App",
+    description:
+      "Aplicativo de previsão do tempo com geolocalização, busca por cidade e dados em tempo real. Interface responsiva e intuitiva.",
+    image:
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
+    technologies: ["React", "TypeScript", "Weather API", "Geolocation"],
+    link: "/demos/weather",
+    demo: true,
+  },
+  {
+    title: "Portfolio Interativo",
     category: "Web Development",
     description:
-      "Plataforma completa de e-commerce com pagamentos, gestão de estoque e dashboard administrativo",
+      "Este portfolio foi construído com Next.js 15, TypeScript e Tailwind CSS. Inclui blog integrado, SEO otimizado e performance de alta qualidade.",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
-    link: "#",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+    link: "/",
+    demo: false,
   },
   {
-    title: "Mobile Banking App",
-    category: "Mobile Development",
-    description:
-      "Aplicativo bancário com autenticação biométrica, transferências e investimentos",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-    technologies: ["React Native", "Node.js", "MongoDB", "Azure DevOps"],
-    link: "#",
-  },
-  {
-    title: "SaaS Dashboard",
-    category: "Web Application",
-    description:
-      "Dashboard completo para SaaS com analytics, gestão de usuários e relatórios",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    technologies: ["React", "C#", "SQL Server", "Azure App Services"],
-    link: "#",
-  },
-  {
-    title: "Restaurant Management",
+    title: "Blog System",
     category: "Full Stack",
     description:
-      "Sistema completo para restaurantes com pedidos, delivery e gestão de funcionários",
+      "Sistema completo de blog com categorias, tags, busca e administração. Backend com Prisma e PostgreSQL, frontend otimizado.",
     image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
-    technologies: ["Angular", "C#", "SQL Server", "Docker"],
-    link: "#",
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
+    link: "/blog",
+    demo: false,
   },
   {
-    title: "Real Estate Platform",
-    category: "Web Development",
+    title: "Component Library",
+    category: "UI/UX",
     description:
-      "Plataforma imobiliária com busca avançada, tours virtuais e gestão de propriedades",
+      "Biblioteca de componentes reutilizáveis com Storybook. Componentes acessíveis, responsivos e customizáveis para projetos React.",
     image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    link: "#",
+      "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80",
+    technologies: ["React", "Storybook", "TypeScript", "Tailwind CSS"],
+    link: "/demos/components",
+    demo: true,
   },
   {
-    title: "Fitness Tracking App",
-    category: "Mobile Development",
+    title: "Landing Pages",
+    category: "Web Design",
     description:
-      "App de fitness com tracking de exercícios, nutrição e progresso personalizado",
+      "Coleção de landing pages modernas e animadas para diferentes tipos de negócios. Design responsivo com foco em conversão.",
     image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
-    technologies: ["React Native", "Node.js", "MongoDB", "AWS S3"],
-    link: "#",
-  },
-  {
-    title: "Learning Management System",
-    category: "Web Application",
-    description:
-      "Sistema de gestão de aprendizado com cursos, avaliações e certificados",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
-    technologies: ["Angular", "Ruby", "PostgreSQL", "Docker"],
-    link: "#",
-  },
-  {
-    title: "Social Media Dashboard",
-    category: "Analytics",
-    description:
-      "Dashboard para gestão de redes sociais com agendamento e analytics",
-    image:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&h=600&fit=crop",
-    technologies: ["React", "Node.js", "MongoDB", "Azure DevOps"],
-    link: "#",
-  },
-  {
-    title: "Inventory Management",
-    category: "Enterprise",
-    description:
-      "Sistema de gestão de estoque com códigos de barras e relatórios avançados",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-    technologies: ["Angular", "C#", "SQL Server", "Azure App Services"],
-    link: "#",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
+    link: "/demos/landing-pages",
+    demo: true,
   },
 ];
 
@@ -110,7 +97,8 @@ export default function Projects() {
             Projetos em Destaque
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Confira alguns dos projetos que desenvolvi para clientes e empresas
+            Confira alguns dos projetos que desenvolvi, incluindo demos
+            funcionais e aplicações completas
           </p>
         </motion.div>
 
@@ -133,10 +121,15 @@ export default function Projects() {
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   priority={index < 3}
                 />
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 flex gap-2">
                   <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}
                   </span>
+                  {project.demo && (
+                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Demo
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -159,9 +152,12 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <button className="text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200">
-                  Ver projeto →
-                </button>
+                <a
+                  href={project.link}
+                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors duration-200"
+                >
+                  {project.demo ? "Ver demo →" : "Ver projeto →"}
+                </a>
               </div>
             </motion.div>
           ))}
@@ -174,9 +170,14 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl">
-            Ver todos os projetos
-          </button>
+          <a
+            href="https://github.com/lucaaspw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            Ver todos os projetos no GitHub
+          </a>
         </motion.div>
       </div>
     </section>
