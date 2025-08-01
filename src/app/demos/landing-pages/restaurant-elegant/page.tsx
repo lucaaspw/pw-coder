@@ -30,7 +30,7 @@ export default function RestaurantElegantLanding() {
       description: "Salmão fresco com azeite trufado e limão siciliano",
       price: "R$ 45",
       image:
-        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop",
       chef: "Chef Marco",
       time: "15 min",
     },
