@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://lucasgoncalves.dev";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://lucasgoncalves.dev";
 
   // Páginas estáticas
   const staticPages = [
@@ -17,9 +17,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily" as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/demos/calculator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/demos/components`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/demos/landing-pages`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
   ];
 
-  // Por enquanto, retornamos apenas as páginas estáticas
-  // Quando o banco de dados estiver configurado, podemos adicionar os posts dinamicamente
   return staticPages;
 }
