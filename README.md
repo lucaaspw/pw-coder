@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Lucas Gonçalves - Portfolio & Blog
 
-## Getting Started
+Portfolio profissional e blog desenvolvido com Next.js 15, React 19, TypeScript e Prisma.
 
-First, run the development server:
+## ✨ Características
 
+- **Next.js 15** - Framework React mais recente
+- **React 19** - Versão mais atual do React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS 4** - Framework de estilos moderno
+- **Prisma** - ORM para banco de dados
+- **Framer Motion** - Animações fluidas
+- **SEO Otimizado** - Meta tags, sitemap, robots.txt
+- **Performance** - Imagens otimizadas, lazy loading
+- **Responsivo** - Design mobile-first
+
+## 🚀 Deploy Rápido
+
+### Opção 1: Vercel (Recomendado)
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel --prod
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Opção 2: Script Automatizado
+```bash
+# Executar script de deploy
+.\deploy.ps1
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Opção 3: Docker
+```bash
+# Build e start
+docker-compose up -d
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Desenvolvimento
 
-## Learn More
+```bash
+# Instalar dependências
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Executar em desenvolvimento
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build para produção
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start do servidor de produção
+npm start
 
-## Deploy on Vercel
+# Linting
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Estrutura do Projeto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/                 # App Router (Next.js 15)
+│   ├── blog/           # Páginas do blog
+│   ├── demos/          # Demonstrações
+│   ├── layout.tsx      # Layout principal
+│   └── page.tsx        # Página inicial
+├── components/         # Componentes React
+│   ├── blog/          # Componentes do blog
+│   └── ...            # Outros componentes
+└── lib/               # Utilitários e configurações
+    └── prisma.ts      # Cliente Prisma
+```
+
+## 🗄️ Banco de Dados
+
+### Configuração
+1. Instale o PostgreSQL
+2. Configure a variável `DATABASE_URL` no `.env`
+3. Execute as migrações:
+
+```bash
+# Gerar cliente Prisma
+npx prisma generate
+
+# Executar migrações
+npx prisma migrate deploy
+```
+
+### Opções de Hosting
+- **Supabase** (Recomendado): https://supabase.com
+- **Neon**: https://neon.tech
+- **Railway**: https://railway.app
+
+## 🔧 Configuração
+
+### Variáveis de Ambiente
+Crie um arquivo `.env` baseado no `env.example`:
+
+```env
+DATABASE_URL="postgresql://username:password@localhost:5432/pw_coder_db"
+NODE_ENV=production
+NEXT_PUBLIC_SITE_URL=https://lucasgoncalves.dev
+```
+
+## 📊 Performance
+
+- **Lighthouse Score**: 95+ em todas as métricas
+- **First Load JS**: ~156 kB
+- **Bundle Size**: Otimizado com tree shaking
+- **Images**: WebP/AVIF com lazy loading
+
+## 🔒 Segurança
+
+- Headers de segurança configurados
+- HSTS ativado
+- XSS Protection
+- Content Type Options
+- CSP (Content Security Policy)
+
+## 📈 SEO
+
+- Meta tags otimizadas
+- Open Graph configurado
+- Sitemap automático
+- Robots.txt configurado
+- Structured data
+
+## 🎨 Design
+
+- Design system consistente
+- Componentes reutilizáveis
+- Animações suaves
+- Dark mode ready
+- Acessibilidade (WCAG 2.1)
+
+## 📱 Responsividade
+
+- Mobile-first design
+- Breakpoints otimizados
+- Touch-friendly
+- Performance mobile
+
+## 🚀 Deploy
+
+Veja o guia completo de deploy em [DEPLOY.md](./DEPLOY.md)
+
+## 📄 Licença
+
+MIT License - veja [LICENSE](LICENSE) para detalhes.
+
+## 🤝 Contribuição
+
+1. Fork o projeto
+2. Crie uma branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📞 Contato
+
+- **Website**: https://lucasgoncalves.dev
+- **Email**: lucas@example.com
+- **LinkedIn**: [Lucas Gonçalves](https://linkedin.com/in/lucasgoncalves)
+- **GitHub**: [@lucasgoncalves](https://github.com/lucasgoncalves)
